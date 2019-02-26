@@ -1,0 +1,21 @@
+#!/bin/bash
+#
+# See skript väljendab minu muljeid enda saavutustest antud aines
+#
+echo "Minu nimi on Kaarel Vent" #Echob antud teksti " " vahel
+sleep 1  #Ootab 1 sekundit, et printida järgmine rida
+echo "Õpin IS118 õppegrupis" #Echob antud teksti " " vahel
+sleep 1 #ootab sekund
+echo -n "Praegune aine tundub huvitav, " #Teksti 1. osa asub siin
+sleep 1 #ootab sekund
+echo "aga keeruline" #Tekstirea 2. osa asub siin
+sleep 1 #ootab sekund
+echo -n "Aine praegune mulje on positiivne ning loodan, " #Rida on liiga pikk
+echo -n "et läbin aine positiivse hindega ja " #ikka liiga pikk
+echo -n "saan skriptimisest uusi teadmisi, "
+#-n tähistab, et on järgmise echo reaga koos
+echo "mida võib kunagi vaja minna" #pika teksti lõpp
+sleep 2
+echo "koodirea lõpp" 
+
+#Kood on läbi
