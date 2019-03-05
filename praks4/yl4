@@ -1,0 +1,18 @@
+#!/bin/bash
+
+#Esitan küsimusi, et leida vajalikud arvud
+echo -n "Sisesta aluskandiku pikkus ja laius cm-tes " #Tekst kirjeldab, et mida  pead vastama ja mitu arvu on vaja
+read pikkus laius #Sisestad arvud ja määrad nendele shortcutid
+echo -n "Kui suuri küpsiseid tahad tordile? (cm-tes; pikkus ja laius) " #Kajab, et kui suurt küpsist tahad
+read pikkus1 laius2 #Leiab informatsiooni küpsiste suuruseks
+echo -n "Mitu kihti soovid tordile? " #Küsib et mitu kihti on vaja
+read kihti #Määrab vastatud arvule shortcutiks kihti
+echo -n "Mitu küpsist on pakis? " #Küsib mitu küpsist on pakis
+read pakis #Määrab vastusele shortcuti pakis
+
+#arvutan pakkide arvu
+echo -n "Sul on vaja osta nii palju pakke küpsiseid: " #Tekst kirjeldab järgmist vastust
+expr $pikkus \* $laius / $pikkus1 / $laius2 \* $kihti / $pakis #Teeb shortcutide abil arvutuse
+test=`expr $pikkus \* $laius / $pikkus1 / $laius2 \* $kihti / $pakis`
+echo -n "Kui see number on üle 0, siis osta üks pakk rohkem: " #Kirjutab teksti, et saaks  aru mis  number see on
+expr $test % $pakis #Arvutab ära mitu küpsist jääb puudu, st. tuleb osta üks lisapakk
