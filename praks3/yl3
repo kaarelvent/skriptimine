@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "arvuti `hostname` on töötand `uptime -p | cut -f1 -d"," | cut -f2 -d" "` tundi ja `uptime -p | cut -f2 -d"," | cut -f2 -d" "` minutit!"
+#Prinditakse välja arvuti nimi, kaua see on töötand tunnid ja minutid. Tundide saamiseks lõigatakse uptime -p tunnid välja, minutite saamiseks lõigatakse minutid välja.
