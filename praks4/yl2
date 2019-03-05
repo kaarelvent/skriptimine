@@ -13,5 +13,7 @@ read pakis #Määrab vastusele shortcuti pakis
 #arvutan pakkide arvu
 echo -n "Sul on vaja osta nii palju pakke küpsiseid: " #Tekst kirjeldab järgmist vastust
 expr $pikkus \* $laius / $pikkus1 / $laius2 \* $kihti / $pakis #Teeb shortcutide abil arvutuse
+kandik=`expr $pikkus \* $laius`
+kypspind=`expr $pikkus1 \* $laius2`
 echo -n "Kui see number on üle 0, siis osta üks pakk rohkem: " #Kirjutab teksti, et saaks  aru mis  number see on
-expr $pikkus \* $laius / $pikkus1 / $laius2 \* $kihti % $pakis #Arvutab ära mitu küpsist jääb puudu, st. tuleb osta üks lisapakk
+expr $kandik % $kypspind #Arvutab ära mitu küpsist jääb puudu, st. tuleb osta üks lisapakk
