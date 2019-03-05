@@ -1,0 +1,4 @@
+#!/bin/bash
+
+find /var/ -iname *.log 2>/dev/null -exec wc -l {} \; | sort -n -r
+# Otsib /var/ kataloogist *.log faile, kui ei leia, annab veateate, executeb ridade lugemise ning sorteerib need kahanevas järjekorras
