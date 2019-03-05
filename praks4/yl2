@@ -13,4 +13,5 @@ read pakis
 #arvutan pakkide arvu
 echo -n "Sul on vaja osta nii palju pakke küpsiseid: "
 expr $pikkus \* $laius / $pikkus1 / $laius2 \* $kihti / $pakis 
-
+echo -n "Kui see number on üle 0, siis osta üks pakk rohkem: "
+expr $pikkus \* $laius / $pikkus1 / $laius2 \* $kihti % $pakis
