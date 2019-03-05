@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#Esitan küsimusi, et leida vajalikud arvud
+echo -n "Sisesta aluskandiku pikkus ja laius cm-tes "
+read pikkus laius
+echo -n "Kui suuri küpsiseid tahad tordile? (cm-tes; pikkus ja laius) "
+read pikkus1 laius2
+echo -n "Mitu kihti soovid tordile? "
+read kihti
+echo -n "Mitu küpsist on pakis? "
+read pakis
+
+#arvutan pakkide arvu
+expr $pikkus \* $laius / $pikkus1 / $laius2 \* $kihti / $pakis
+echo -n "Sul on vaja poest osta "
