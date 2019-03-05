@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo -n "Mitu reisijat on grupis? " #Küsib mitu inimest on grupis
+read reisijat #Peab vastama mitu inimest on grupis
+echo -n "Mitu kohta on bussis? " #Küsib mitu kohta on ühes bussis
+read kohta #Vastad mitu kohta on ühes bussis
+
+echo -n "Nii palju busse saab täis: " #Tekst, et saaks teada mida tähendab järgmine arv
+expr $reisijat / $kohta #Arvutab palju busse on vaja
+echo -n "Nii palju inimesi jääb maha: " #Tekst, et saaks teada mida tähendab järgmine arv
+expr $reisijat % $kohta #Ütleb palju inimesi jääb maha
+
+
