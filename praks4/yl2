@@ -11,5 +11,6 @@ echo -n "Mitu küpsist on pakis? "
 read pakis
 
 #arvutan pakkide arvu
-expr $pikkus \* $laius / $pikkus1 / $laius2 \* $kihti / $pakis
-echo -n "Sul on vaja poest osta "
+echo -n "Sul on vaja osta nii palju pakke küpsiseid: "
+expr $pikkus \* $laius / $pikkus1 / $laius2 \* $kihti / $pakis 
+
