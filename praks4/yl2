@@ -11,9 +11,16 @@ echo -n "Mitu küpsist on pakis? " #Küsib mitu küpsist on pakis
 read pakis #Määrab vastusele shortcuti pakis
 
 #arvutan pakkide arvu
-echo -n "Sul on vaja osta nii palju pakke küpsiseid: " #Tekst kirjeldab järgmist vastust
-expr $pikkus \* $laius / $pikkus1 / $laius2 \* $kihti / $pakis #Teeb shortcutide abil arvutuse
+#Lihtsustan tehteid
 kandik=`expr $pikkus \* $laius`
 kypspind=`expr $pikkus1 \* $laius2`
-echo -n "Kui see number on üle 0, siis osta üks pakk rohkem: " #Kirjutab teksti, et saaks  aru mis  number see on
-expr $kandik % $kypspind #Arvutab ära mitu küpsist jääb puudu, st. tuleb osta üks lisapakk
+yheskihis=`expr $kandik / $kypspind`
+jaakkihis=`expr $kandik % $kypspind`
+jaakkokku=`expr $jaakkihis \* $kihti`
+kypsisveel=`expr $jaakkokku / $kypspind`
+kypsised1=`expr $yheskihis \* $kihti`
+kypsisedkokku=`expr $kypsised1 + $kypsisveel`
+pakkarv=`expr $kypsisedkokku / $pakis`
+jaak=`expr $kypsisedkokku % $pakis`
+echo "Kokku on vaja $pakkarv pakki ja lisaks veel $jaak küpsist"
+echo "Kui siin ei ole NULL: $jaakkokku siis veel 1 küpsis"
