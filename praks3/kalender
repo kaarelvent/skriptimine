@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo -n "Today is " #Kajab Today is, -n ütleb et järgmise reaga on koos
+date +"%A, %B %C, %G" #Prindib välja päeva, kuu, päeva numbri ja aasta
+echo -n "Time is " #Prindib Time is
+date +"%H:%M" #Prindib praeguse kellaaja tundides ja minutittes
+echo " " #kajab tühja read
+echo -n "Calendar of" #Echob Calendar of
+cal #Prindib välja praeguse kuu kalendri
