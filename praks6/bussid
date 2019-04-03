@@ -1,0 +1,27 @@
+#!/bin/bash
+
+#Küsib palju on reisijaid ja teeb vastustest shortcuti
+echo "Sisesta reisijate arv"
+read reisijat
+
+#Küsib istekohtade arvu ja teeb shortcuti
+echo "Mitu istekohta on bussis?"
+read istet
+
+#Arvutab mitu bussi saab täis
+kohad=$(( $reisijat / $istet ))
+
+#Arvutab palju maha jääb
+maha=$(( $reisijat % $istet ))
+
+#Kontrollib et kas on vaja lisabussi
+
+if [ $maha -eq 0 ]
+then 
+	#Ei ole vaja lisabussi
+	echo "Vaja läheb " $kohad " bussi"
+
+else
+	#Kui ühte bussi on veel vaja
+	echo "Vaja läheb " `expr $kohad + 1` " bussi"
+fi
