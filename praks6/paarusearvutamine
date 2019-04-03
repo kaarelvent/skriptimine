@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#Kontrollib kas tegu on paarisarvuga
+
+echo -n "Sisesta suvaline arv: "
+read arv
+
+#Arvutab jäägi jagades selle kahega
+
+jaak=$(( $arv % 2 ))
+
+#If funktsiooni abil echomine
+
+if [ $jaak -eq 0 ]
+then
+	echo $arv " on paaris"
+else
+	echo $arv " on paaritu"
+fi
+
