@@ -1,0 +1,12 @@
+#!/bin/bash
+#Küsib millal lähed puhkusele ja kui pikk see on, samuti loob shortcutid
+echo -n "Mis päeval lähed puhkusele? "
+read day
+
+echo -n "Kui kauaks lähed puhkama?(Numbrina) "
+read duration
+
+#Kajab mis päeval tuled tagasi
+echo -n "Sa tuled tagasi päeval " `expr \( $day + $duration \) % 7`
+
+echo " "
