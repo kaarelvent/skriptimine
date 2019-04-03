@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#Skript küsib kolmnurga jaoks kolme külje andmeid
+echo -n "Sisesta kolmnurga esimene külg: "
+read a
+
+echo -n "Sisesta kolmnurga teine külg: "
+read b
+
+echo -n "Sisesta kolmnurga kolmas külg: "
+read c
+
+#Leiab pool ümbermõõdust, et lihtsustada valemit
+P=$(bc <<< "scale=1; ($a+$b+$c)/2")
+
+#Leiab Heroni valemiga pindala
+S=$(bc <<< "scale=4; sqrt(($P-$a)*($P-$b)*($P-$c)*$P)")
+
+#Kajab kolmnurga pindala
+echo "Pindala on "$S
