@@ -1,0 +1,20 @@
+#!/bin/bash
+#Sisestatakse suvaline arv, nende numbrid liidetakse kokku
+
+echo -n "Sisesta suvaline täisarv: "
+read s
+#Summale väärtus
+summa=0
+#Lisan s (sisestatud arv) teise teisenduse
+ms=$s
+#Ring käib nii kaua kuni ms on 0
+while [ $ms != 0 ]
+do
+#Väljastab viimase numbri
+	number=$(bc <<< "$s % 10")
+#Lisatakse summasse
+	summa=$(bc <<< "$summa + $number")
+#Väljastab ülejäänud arvud
+	ms=$(bc <<< "$ms / 10")
+done
+echo "Arvu $s summa on $summa"
