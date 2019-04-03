@@ -1,0 +1,23 @@
+#!/bin/bash
+
+echo -n "Sisesta oma vanus täisarvuna: " #Küsib vastaja vanust 
+read vanus #Loob lühendi nimega vanus
+
+if [ $vanus -gt 0 -a $vanus -lt 11 ] #1. kontrollib et kas number on 0 - 11 vahel
+then
+	echo "Sa oled laps" #Kui vastus on 0 - 11 vahel, siis echob selle
+elif [ $vanus -ge 11 -a $vanus -lt 18 ] #Siis kontrollib kas number on 11 - 18 vahel
+then
+	echo "Sa oled nooruk" #Kui arv on 11 - 18 siis echob selle
+elif [ $vanus -ge 18 -a $vanus -lt 63 ] #Siis kontrollib kas number on 18 - 63 vahel
+then
+	echo "Sa oled täiskasvanu" #Kui arv on 18 - 63 siis echob selle
+elif [ $vanus -ge 63 ] #Siis kontrollib kas number on üle 63
+then
+	echo "sa oled seenior" #Kui arv on üle 63 siis echob selle
+else
+	echo "Vigane sisend" #kui neid tingimusi ei täidetud, siis echob vigase väljendi
+fi
+
+#Skripti lõpp
+
