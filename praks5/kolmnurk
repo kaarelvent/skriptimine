@@ -1,0 +1,12 @@
+#! /bin/bash
+#Küsib küljed A ja B, et saaks teha vajalikud arvutused
+read -p "Külg A" a
+read -p "Külg B" b
+#Arvutuste rida
+let "c= $a * $a + $b * $b"
+
+#echo $c
+#Võtab ruutjuure, sest eelnev vastus on c ruudus
+d=$(bc <<< "scale=2; sqrt ($c)")
+#Kajab vastuse
+echo "Kolmas külg on " $d
