@@ -1,0 +1,31 @@
+#!/bin/bash
+
+#Küsib kuu numbri et leida aastaaja
+
+echo -n "Sisesta praeguse kuu number: "
+read kuu
+
+#Kontrollib kas on talv - kuu number 12, 1 ja 2
+if test $kuu -ge 1 -a $kuu -lt 3 -o $kuu -eq 12
+then
+	echo "Tegu on talvekuuga"
+
+#Kontrollib kas on kevad
+elif test $kuu -ge 3 -a $kuu -lt 6
+then
+	echo "Tegu on kevadkuuga"
+
+#Kontrollib kas on suvi
+elif test $kuu -ge 6 -a $kuu -lt 9
+then
+	echo "Tegu on suvekuuga"
+
+#Kontrollib kas on sügis
+elif test $kuu -ge 9 -a $kuu -lt 12
+then
+	echo "Tegu on suvekuuga"
+
+#Kui sisestatakse vale number
+else
+	echo "Seda kuud ei eksisteeri"
+fi
