@@ -7,15 +7,15 @@ echo -n "Mitu tulpa soovid? "
 read tulpa
 
 #Tsükkel ridade vahetuseks ja arvu suurendamise kohta
-for (( a=1; a<=$rida; a++ ))
+for (( i=1; i<=$rida; i++ ))
 do
 #Tsükkel väljastamaks ridadesse ja tulpadesse piisavalt tärne
-	for (( b=1; b<=$tulpa; b++ ))
+	for (( j=1; j<=$tulpa; j++ ))
 	do
-	if [ $a -eq 1 -o $a -eq $rida ];
+	if [ $i -eq 1 -o $i -eq $rida ];
 	then
 	echo -n "*"
-	elif [ $b -eq 1 -o $b -eq $tulpa ];
+	elif [ $j -eq 1 -o $j -eq $tulpa ];
 	then
 	echo -n "*"
 	else
