@@ -1,0 +1,21 @@
+#!/bin/bash
+
+#Küsin kasutajalt shortcutide jaoks infot
+echo -n "Mitu rida sa soovid? "
+read rida
+echo -n "Mitu tulpa sa soovid? "
+read tulpa
+
+#Mitu rida peab skript tegema
+for (( i = 1; i<=$rida; i++ ))
+do
+#Määrab reale ka numbri
+echo -n "$i."
+#Määrab palju tulpasi tahab
+	for (( j = 1 ; j<=$tulpa; j++ ))
+	do
+#Mida skript peab kajama?
+		echo -n "*"
+	done
+echo ""
+done
