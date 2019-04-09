@@ -1,0 +1,17 @@
+#!/bin/bash
+
+
+#Määrata skriptile, et mitu rida peab printima
+for (( i = 1 ; i<= 5; i++))
+do
+#Määrata rea algusesse number
+echo -n "$i."
+#Mitu tähemärki peab reas olema
+	for (( j = 1 ; j<= 5; j++ ))
+	do
+#Kajab, et mida on vaja reas printida, sellel juhul *
+		echo -n "*"
+	done
+#Prindib uue rea
+echo ""
+done
