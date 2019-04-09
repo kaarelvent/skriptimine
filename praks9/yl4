@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#Küsib kasutajalt mitu rida ta soovib
+echo -n "Mitu rida soovid? "
+read rida
+#Tsükkel reavahetuseks ja tärnide arvu suurendamiseks
+for (( i = 1; i<=$rida; i++ ))
+do
+#Igale reale number
+echo -n "$i."
+#Et väljastaks piisavalt tärne
+	for (( j = 1 ; j<= i; j++ ))
+	do
+		echo -n "*"
+	done
+echo ""
+done
