@@ -23,7 +23,7 @@ then
 #Kontrollib kas on sügis
 elif test $kuu -ge 9 -a $kuu -lt 12
 then
-	echo "Tegu on suvekuuga"
+	echo "Tegu on talvekuuga"
 
 #Kui sisestatakse vale number
 else
