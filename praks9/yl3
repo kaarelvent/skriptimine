@@ -1,0 +1,23 @@
+#!/bin/bash
+
+echo -n "Mitu rida soovid? "
+read rida
+echo -n "Mitu tulpa soovid? "
+read tulpa
+
+for (( a=1; a<=$rida; a++ ))
+do
+	for (( b=1; b<=$tulpa; b++ ))
+	do
+	if [ $a -eq 1 -o $a -eq $rida ];
+	then
+	echo -n "*"
+	elif [ $b -eq 1 -o $b -eq $tulpa ];
+	then
+	echo -n "*"
+	else
+	echo -n " "
+	fi
+	done
+echo " "
+done
