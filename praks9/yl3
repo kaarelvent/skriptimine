@@ -1,12 +1,15 @@
 #!/bin/bash
 
+#Küsib andmeid
 echo -n "Mitu rida soovid? "
 read rida
 echo -n "Mitu tulpa soovid? "
 read tulpa
 
+#Tsükkel ridade vahetuseks ja arvu suurendamise kohta
 for (( a=1; a<=$rida; a++ ))
 do
+#Tsükkel väljastamaks ridadesse ja tulpadesse piisavalt tärne
 	for (( b=1; b<=$tulpa; b++ ))
 	do
 	if [ $a -eq 1 -o $a -eq $rida ];
