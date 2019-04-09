@@ -21,7 +21,7 @@ then
 	echo "Tegu on suvekuuga"
 
 #Kontrollib kas on sügis
-elif test $kuu -ge 9 -a $kuu -lt 12
+elif test $kuu -ge 9 -a $kuu -lt 11
 then
 	echo "Tegu on talvekuuga"
 
