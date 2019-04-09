@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#Küsib andmeid
+echo -n "Mitu rida soovib? "
+read rida
+#Tsükkel reavahetuseks ja arvu suurendamiseks
+for (( i = 0; i < rida; i++ ))
+do
+#Reale number ette
+echo -n "$i."
+#Piisavalt tärne oleks
+	for (( j = 1 ; j <= $rida - i; j++ ))
+	do
+		echo -n "*"
+	done
+echo""
+done
